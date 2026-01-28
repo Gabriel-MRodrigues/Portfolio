@@ -41,6 +41,7 @@ import { DiVisualstudio } from 'react-icons/di';
 import { SiArduino } from 'react-icons/si';
 import { SiPlatformio } from 'react-icons/si';
 import { SiJira } from 'react-icons/si';
+import { SiPostman } from 'react-icons/si';
 //Cloud
 import { FaAws } from 'react-icons/fa';
 
@@ -225,6 +226,11 @@ export const skillsList = [
   {
     name: 'Jira',
     icon: <SiJira />,
+    category: 'tools',
+  },
+  {
+    name: 'Postman',
+    icon: <SiPostman />,
     category: 'tools',
   },
   //Cloud
