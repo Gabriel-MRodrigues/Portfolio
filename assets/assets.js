@@ -259,7 +259,7 @@ export const projectList = [
     tags: ['HTML', 'CSS'],
     demoUrl: 'https://gabriel-mrodrigues.github.io/Recipe-Exchange/',
     repo: 'https://github.com/Gabriel-MRodrigues/Recipe-Exchange',
-    featured: 'no',
+    featured: 'all',
   },
   {
     id: 2,
@@ -269,7 +269,7 @@ export const projectList = [
     tags: ['C#', 'OOP'],
     demoUrl: '#',
     repo: 'https://github.com/Gabriel-MRodrigues/Library-Management-System',
-    featured: 'no',
+    featured: 'all',
   },
   {
     id: 3,
@@ -279,7 +279,7 @@ export const projectList = [
     tags: ['C#', 'ASP.NET', 'Entity Framework', 'MVC'],
     demoUrl: '#',
     repo: 'https://github.com/Gabriel-MRodrigues/ExpenseTracker',
-    featured: 'no',
+    featured: 'all',
   },
   {
     id: 4,
@@ -290,18 +290,18 @@ export const projectList = [
     tags: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://gabriel-mrodrigues.github.io/Pig-Game/',
     repo: 'https://github.com/Gabriel-MRodrigues/Pig-Game',
-    featured: 'no',
+    featured: 'all',
   },
   {
     id: 5,
     title: 'Bankist App',
     description:
       'Web application that simulates an user interface of a bank where users can check their transactions.',
-    image: '/projects/bakist.png',
+    image: '/projects/bankist.png',
     tags: ['HTML', 'CSS', 'JavaScript'],
     demoUrl: 'https://gabriel-mrodrigues.github.io/BankistApp/',
     repo: 'https://github.com/Gabriel-MRodrigues/BankistApp',
-    featured: 'no',
+    featured: 'all',
   },
   {
     id: 6,
@@ -311,7 +311,7 @@ export const projectList = [
     tags: ['React', 'AppWrite', 'The Movie Database (TMDB)'],
     demoUrl: '#',
     repo: 'https://github.com/Gabriel-MRodrigues/MovieApp',
-    featured: 'no',
+    featured: 'all',
   },
   {
     id: 7,
@@ -341,7 +341,7 @@ export const projectList = [
     tags: ['C++', 'Arduino', 'Embedded Systems'],
     demoUrl: '#',
     repo: 'https://github.com/Gabriel-MRodrigues/Embedded_Systems/tree/main/LED_BLINK',
-    featured: 'no',
+    featured: 'all',
   },
   {
     id: 10,
@@ -351,7 +351,7 @@ export const projectList = [
     tags: ['C++', 'Arduino', 'Embedded Systems'],
     demoUrl: 'https://wokwi.com/projects/452427386341351425',
     repo: 'https://github.com/Gabriel-MRodrigues/Embedded_Systems/tree/main/spaceship',
-    featured: 'no',
+    featured: 'all',
   },
   {
     id: 11,
@@ -361,7 +361,7 @@ export const projectList = [
     tags: ['C++', 'Arduino', 'Embedded Systems'],
     demoUrl: 'https://wokwi.com/projects/452973748642778113',
     repo: 'https://github.com/Gabriel-MRodrigues/Embedded_Systems/tree/main/Love_o_Meter',
-    featured: 'no',
+    featured: 'all',
   },
   {
     id: 12,
@@ -371,7 +371,7 @@ export const projectList = [
     tags: ['C++', 'ESP32', 'Embedded Systems'],
     demoUrl: '#',
     repo: 'https://github.com/Gabriel-MRodrigues/Embedded_Systems/tree/main/color_mixing_lamp',
-    featured: 'no',
+    featured: 'all',
   },
   {
     id: 13,
@@ -381,6 +381,19 @@ export const projectList = [
     tags: ['C++', 'ESP32', 'Embedded Systems'],
     demoUrl: 'https://wokwi.com/projects/454109990091329537',
     repo: 'https://github.com/Gabriel-MRodrigues/Embedded_Systems/tree/main/Digital_Hourglass',
-    featured: 'no',
+    featured: 'all',
+  },
+  {
+    id: 14,
+    title: 'Bio Generator App',
+    description:
+      'Web based application to generate biography based on user input.',
+    image: '/projects/biography_app.png',
+    tags: ['React', 'NodeJs', 'Gemini'],
+    demoUrl: '#',
+    repo: 'https://github.com/Gabriel-MRodrigues/Bio-Generator-App',
+    featured: 'featured',
   },
 ];
+
+export const featuredList = ['featured', 'all'];
