@@ -36,16 +36,16 @@ const Contact = () => {
         I'm always open to discussing new opportunities.
       </p>
       <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
-        <div className="grid grid-cols-2 gap-6 mt-10 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-8">
           <input
-            className="flex-1 p-3 outline-none border-[0.5px] border-black rounded-md bg-white"
+            className="w-full p-3 text-sm sm:text-base outline-none border-[0.5px] border-black rounded-md bg-white"
             type="text"
             placeholder="Enter your name"
             required
             name="name"
           />
           <input
-            className="flex-1 p-3 outline-none border-[0.5px] border-black rounded-md bg-white"
+            className="w-full p-3 text-sm sm:text-base outline-none border-[0.5px] border-black rounded-md bg-white"
             type="email"
             placeholder="Enter your email"
             required

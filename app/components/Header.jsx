@@ -6,12 +6,15 @@ import { assets } from '@/assets/assets';
 
 const Header = () => {
   return (
-    <div className="w-11/12 max-w-3x1 text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 scroll-mt-20">
+    <div
+      id="top"
+      className="pt-24 md:pt-28 w-11/12 max-w-3xl mx-auto min-h-screen flex flex-col items-center justify-center gap-6 text-center scroll-mt-20"
+    >
       <div>
         <Image
           src={assets.profile_image}
           alt="Profile-image"
-          className="rounded-full w-32"
+          className="rounded-full w-28 sm:w-32"
         />
       </div>
       <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3">

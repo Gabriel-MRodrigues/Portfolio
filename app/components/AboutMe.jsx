@@ -44,17 +44,19 @@ const AboutMe = () => {
               </a>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-6">
+          <div className="flex flex-col gap-6 max-w-2xl mx-auto">
             {infoList.map(({ icon, title, description }, index) => (
               <div
                 key={index}
-                className="border border-black rounded-full px-5 py-3 min-h-[96px] flex items-center"
+                className="border border-black rounded-2xl sm:rounded-full px-5 py-3 min-h-[96px] flex items-center"
               >
                 <div className="flex items-start gap-4">
                   <div className="p-2">{icon}</div>
                   <div className="text-left">
                     <h4 className="font-semibold text-lg">{title}</h4>
-                    <p className="text-muted-foreground">{description}</p>
+                    <p className="text-sm sm:text-base text-muted-foreground">
+                      {description}
+                    </p>
                   </div>
                 </div>
               </div>
