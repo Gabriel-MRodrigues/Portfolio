@@ -237,6 +237,14 @@ export const skillsList = [
   {
     name: 'AWS',
     icon: <FaAws />,
-    category: 'Cloud',
+    category: 'cloud',
   },
+];
+
+export const categoryList = [
+  'frontend',
+  'backend',
+  'tools',
+  'cloud',
+  'database',
 ];
