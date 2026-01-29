@@ -37,7 +37,7 @@ const AboutMe = () => {
               <a
                 href="https://www.linkedin.com/in/gabriel-mendes-rodrigues/"
                 target="_blank"
-                className="px-10 py-3 border border-black rounded-full flex items-center gap-2"
+                className="px-10 py-3 bg-black text-white rounded-full flex items-center gap-2"
               >
                 LinkedIn
                 <FaLinkedin />

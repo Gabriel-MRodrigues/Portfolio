@@ -3,6 +3,8 @@ import { TfiAngleDoubleRight } from 'react-icons/tfi';
 import { LuMoonStar } from 'react-icons/lu';
 import { RiMenu3Line } from 'react-icons/ri';
 import { RxCross2 } from 'react-icons/rx';
+import { assets } from '@/assets/assets';
+import Image from 'next/image';
 
 const Navbar = () => {
   const sideMenuRef = useRef();
@@ -17,6 +19,15 @@ const Navbar = () => {
 
   return (
     <>
+      <div className="fixed inset-0 -z-10">
+        <Image
+          src={assets.header_bg_gradient}
+          alt=""
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
       <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
         <a href="#top" className="text-2xl">
           Gabriel Rodrigues
@@ -46,7 +57,7 @@ const Navbar = () => {
           </button>
           <a
             href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
+            className="hidden lg:flex items-center gap-3 px-10 py-2.5 bg-black text-white rounded-full ml-4"
           >
             Contact <TfiAngleDoubleRight />
           </a>
