@@ -1,10 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { TfiAngleDoubleRight } from 'react-icons/tfi';
-import { LuMoonStar } from 'react-icons/lu';
 import { RiMenu3Line } from 'react-icons/ri';
 import { RxCross2 } from 'react-icons/rx';
-import { assets } from '@/assets/assets';
-import Image from 'next/image';
 
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
@@ -30,24 +27,18 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed inset-0 -z-10">
-        <Image
-          src={assets.header_bg_gradient}
-          alt=""
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
       <nav
-        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? 'bg-white bg-opacity-50 backdrop-blur-lg shadow-sm' : ''}`}
+        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 transition-colors duration-300 ${isScroll ? 'bg-black/50 backdrop-blur-lg border-b border-[var(--color-border)]' : ''}`}
       >
-        <a href="#top" className="text-2xl">
+        <a
+          href="#top"
+          className="text-2xl font-semibold tracking-tight text-[var(--color-header)]"
+        >
           Gabriel Rodrigues
         </a>
 
         <ul
-          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? '' : 'bg-white shadow-sm bg-opacity-50'}`}
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-black/40 backdrop-blur`}
         >
           <li>
             <a href="#top">Home</a>
@@ -67,12 +58,9 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-4">
-          <button className="cursor-pointer">
-            <LuMoonStar size={28} />
-          </button>
           <a
             href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10 py-2.5 bg-black text-white rounded-full ml-4"
+            className="hidden lg:flex items-center gap-3 px-10 py-2.5 bg-white border border-[var(--color-border)] text-black rounded-full ml-4 hover:bg-black hover:text-white duration-500"
           >
             Contact <TfiAngleDoubleRight />
           </a>
@@ -87,7 +75,7 @@ const Navbar = () => {
         {/* Mobile menu */}
         <ul
           ref={sideMenuRef}
-          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500"
+          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-[var(--color-card-bg)] transition duration-500"
         >
           <div
             className="absolute right-6 top-6 cursor-pointer"

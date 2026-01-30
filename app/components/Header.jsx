@@ -31,14 +31,14 @@ const Header = () => {
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <a
           href="#contact"
-          className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2"
+          className="px-10 py-3 border border-[var(--color-border)] rounded-full bg-white text-black flex items-center gap-2 hover:bg-black hover:text-white duration-500"
         >
           Contact <TfiAngleDoubleRight />
         </a>
         {/* download my resume*/}
         <a
           href="/Gabriel_Resume.pdf"
-          className="px-10 py-3 border border-black rounded-full flex items-center gap-2"
+          className="px-10 py-3 border border-black bg-black rounded-full flex items-center gap-2 hover:bg-white hover:text-black duration-500"
           download
         >
           Resume <IoMdDownload />

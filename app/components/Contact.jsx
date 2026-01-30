@@ -28,7 +28,10 @@ const Contact = () => {
     }
   };
   return (
-    <div id="contact" className="w-full px-[12%] py-10 scroll-mt-20">
+    <div
+      id="contact"
+      className="relative overflow-hidden w-full px-[12%] py-10 scroll-mt-20"
+    >
       <h4 className="text-center mb-2 text-lg">Connect with me</h4>
       <h2 className="text-center text-5xl">Get in touch</h2>
       <p className="text-center max-w-2xl mx-auto mt-5 mb-12">
@@ -38,14 +41,14 @@ const Contact = () => {
       <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-8">
           <input
-            className="w-full p-3 text-sm sm:text-base outline-none border-[0.5px] border-black rounded-md bg-white"
+            className="w-full p-3 text-sm sm:text-base outline-none border-[0.5px] border-[var(--color-border)] bg-[var(--color-card-bg)] rounded-md"
             type="text"
             placeholder="Enter your name"
             required
             name="name"
           />
           <input
-            className="w-full p-3 text-sm sm:text-base outline-none border-[0.5px] border-black rounded-md bg-white"
+            className="w-full p-3 text-sm sm:text-base outline-none border-[0.5px] border-[var(--color-border)] bg-[var(--color-card-bg)] rounded-md"
             type="email"
             placeholder="Enter your email"
             required
@@ -53,7 +56,7 @@ const Contact = () => {
           />
         </div>
         <textarea
-          className="w-full p-4 outline-none border-[0.5px] border-black rounded-md bg-white mb-6"
+          className="w-full p-4 outline-none border-[0.5px] border-[var(--color-border)] bg-[var(--color-card-bg)] rounded-md mb-6"
           rows="6"
           placeholder="Enter your message"
           required
@@ -61,7 +64,7 @@ const Contact = () => {
         ></textarea>
 
         <button
-          className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 cursor-pointer"
+          className="py-3 px-8 w-max flex items-center justify-between gap-2 border border-[var(--color-border)] bg-black text-white rounded-full mx-auto hover:bg-white hover:text-black duration-500 cursor-pointer"
           type="submit"
         >
           Send Message <IoIosSend />

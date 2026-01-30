@@ -1,6 +1,5 @@
 // Profile picture
 import profile_image from './Profile-Picture.jpg';
-import header_bg_gradient from './bg-gradient.png';
 
 // Information Icons
 import { FaCode } from 'react-icons/fa';
@@ -48,7 +47,6 @@ import { FaAws } from 'react-icons/fa';
 
 export const assets = {
   profile_image,
-  header_bg_gradient,
 };
 
 export const infoList = [

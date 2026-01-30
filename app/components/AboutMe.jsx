@@ -33,22 +33,22 @@ const AboutMe = () => {
               keep up with a fast-moving tech landscape.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 items-start ">
               <a
                 href="https://www.linkedin.com/in/gabriel-mendes-rodrigues/"
                 target="_blank"
-                className="px-10 py-3 bg-black text-white rounded-full flex items-center gap-2"
+                className="px-10 py-3 bg-black text-white rounded-full flex items-center gap-2 hover:bg-white hover:text-black duration-500"
               >
                 LinkedIn
                 <FaLinkedin />
               </a>
             </div>
           </div>
-          <div className="flex flex-col gap-6 max-w-2xl mx-auto">
+          <div className="flex flex-col gap-6 max-w-2xl mx-auto space-y-6">
             {infoList.map(({ icon, title, description }, index) => (
               <div
                 key={index}
-                className="border border-black rounded-2xl sm:rounded-full px-5 py-3 min-h-[96px] flex items-center"
+                className="border border-[var(--color-border-muted)] rounded-2xl sm:rounded-full px-5 py-3 min-h-[96px] flex items-center"
               >
                 <div className="flex items-start gap-4">
                   <div className="p-2">{icon}</div>

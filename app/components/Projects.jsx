@@ -30,8 +30,8 @@ const Projects = () => {
               className={cn(
                 'px-5 py-2 rounded-full capitalize transition-colors cursor-pointer shadow-xl',
                 activeProjects === category
-                  ? 'bg-black text-white'
-                  : 'bg-white',
+                  ? 'bg-white text-black'
+                  : 'bg-black text-white',
               )}
             >
               {category}
@@ -53,7 +53,7 @@ const Projects = () => {
             }) => (
               <div
                 key={id}
-                className="group rounded-lg overflow-hidden shadow-lg p-3"
+                className="group rounded-lg overflow-hidden shadow-lg p-3 bg-[var(--color-card-bg)] border border-[var(--color-border)]"
               >
                 <div className="h-48 overflow-hidden">
                   <img
@@ -84,11 +84,11 @@ const Projects = () => {
                       <></>
                     ) : (
                       <a href={demoUrl} target="_blank">
-                        <FaExternalLinkAlt />
+                        <FaExternalLinkAlt size={25} />
                       </a>
                     )}
                     <a href={repo} target="_blank">
-                      <FaGithub />
+                      <FaGithub size={25} />
                     </a>
                   </div>
                 </div>
@@ -100,7 +100,7 @@ const Projects = () => {
           <a
             href="https://github.com/Gabriel-MRodrigues"
             target="_blank"
-            className="inline-flex px-10 py-3 rounded-full bg-black text-white items-center justify-center gap-2"
+            className="inline-flex px-10 py-3 rounded-full bg-black text-white items-center justify-center gap-2 hover:bg-white hover:text-black duration-500"
           >
             Check my GitHub <FaGithub />
           </a>

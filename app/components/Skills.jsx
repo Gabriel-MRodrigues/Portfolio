@@ -22,10 +22,10 @@ const Skills = () => {
               key={index}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                'px-5 py-2 rounded-full capitalize transition-colors cursor-pointer shadow-xl',
+                'px-5 py-2 rounded-full capitalize transition-colors cursor-pointer shadow-lg',
                 activeCategory === category
-                  ? 'bg-black text-white'
-                  : 'bg-white',
+                  ? ' bg-white text-black'
+                  : 'bg-black text-white',
               )}
             >
               {category}
@@ -37,7 +37,7 @@ const Skills = () => {
           {filteredSkills.map(({ name, icon, category }, index) => (
             <div
               key={index}
-              className="relative p-6 rounded-lg shadow-lg flex items-center justify-center"
+              className="relative p-6 border border-[var(--color-border)] rounded-lg bg-black/40 shadow-xl flex items-center justify-center"
             >
               <h3 className="font-semibold text-lg text-center">{name}</h3>
               <div className="absolute right-6 text-3xl">{icon}</div>
