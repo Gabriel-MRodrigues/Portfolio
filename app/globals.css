@@ -8,6 +8,12 @@ html {
   scroll-behavior: smooth;
 }
 
+.white__gradient {
+  background: radial-gradient(circle, #979797 0%, rgba(255, 255, 255, 0) 65%);
+  filter: blur(140px);
+  mix-blend-mode: screen;
+}
+
 @theme {
   --color-bg-gradient: radial-gradient(
     120% 100% at 30% 20%,
