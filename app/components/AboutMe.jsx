@@ -48,7 +48,7 @@ const AboutMe = () => {
             {infoList.map(({ icon, title, description }, index) => (
               <div
                 key={index}
-                className="border border-[var(--color-border-muted)] rounded-2xl sm:rounded-full px-5 py-3 min-h-[96px] flex items-center"
+                className="border border-[var(--color-border-muted)] rounded-2xl sm:rounded-full px-5 py-3 min-h-[96px] flex items-center bg-black/20"
               >
                 <div className="flex items-start gap-4">
                   <div className="p-2">{icon}</div>

@@ -61,7 +61,7 @@ const Projects = () => {
               <div
                 key={id}
                 onClick={() => setSelectedProject({ title, demoUrl, repo })}
-                className="group rounded-lg overflow-hidden shadow-lg p-3 bg-[var(--color-card-bg)] cursor-pointer border border-[var(--color-border)]"
+                className="group rounded-lg overflow-hidden shadow-lg p-3 bg-[var(--color-card-bg)] cursor-pointer border border-[var(--color-border)] hover:bg-[var(--color-card-bg-hover)] duration-500"
               >
                 <div className="h-48 overflow-hidden">
                   <img
@@ -114,7 +114,7 @@ const Projects = () => {
                     <a
                       href={selectedProject.demoUrl}
                       target="_blank"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white text-black justify-center"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white text-black justify-center hover:text-white hover:bg-black duration-500"
                     >
                       <FaExternalLinkAlt />
                       Live Demo
@@ -124,7 +124,7 @@ const Projects = () => {
                   <a
                     href={selectedProject.repo}
                     target="_blank"
-                    className="flex items-center gap-2 px-4 py-2 rounded-lg justify-center bg-black text-white"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg justify-center bg-black text-white hover:bg-white hover:text-black duration-500"
                   >
                     <FaGithub />
                     GitHub Repo
