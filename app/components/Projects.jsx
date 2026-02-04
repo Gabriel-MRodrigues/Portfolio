@@ -138,7 +138,7 @@ const Projects = () => {
           <a
             href="https://github.com/Gabriel-MRodrigues"
             target="_blank"
-            className="inline-flex px-10 py-3 rounded-full bg-black text-white items-center justify-center gap-2 hover:bg-white hover:text-black duration-500"
+            className="inline-flex px-10 py-3 rounded-full bg-white text-black items-center justify-center gap-2 hover:bg-black hover:text-white duration-500"
           >
             Check my GitHub <FaGithub />
           </a>

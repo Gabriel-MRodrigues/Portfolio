@@ -75,7 +75,7 @@ const Contact = () => {
         ></textarea>
 
         <button
-          className="py-3 px-8 w-max flex items-center justify-between gap-2 border border-[var(--color-border)] bg-black text-white rounded-full mx-auto hover:bg-white hover:text-black duration-500 cursor-pointer"
+          className="py-3 px-8 w-max flex items-center justify-between gap-2 border border-[var(--color-border)] bg-white text-black rounded-full mx-auto hover:bg-black hover:text-white duration-500 cursor-pointer"
           type="submit"
           disabled={isSubmitting}
         >
