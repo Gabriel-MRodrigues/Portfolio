@@ -1,13 +1,15 @@
 'use client';
 import React, { useState } from 'react';
 import { IoIosSend } from 'react-icons/io';
+import { useToast } from '../hooks/use-toast';
 
 const Contact = () => {
-  const [result, setResult] = useState('');
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult('Sending....');
+    setIsSubmitting(true);
     const formData = new FormData(event.target);
 
     formData.append('access_key', process.env.NEXT_PUBLIC_FORM_ACCESS_KEY);
@@ -20,12 +22,19 @@ const Contact = () => {
     const data = await response.json();
 
     if (data.success) {
-      setResult('Form Submitted Successfully');
+      toast({
+        title: 'Message sent!',
+        description: "Thank you for your message, I'll get back to you soon!",
+      });
       event.target.reset();
     } else {
       console.log('Error', data);
-      setResult(data.message);
+      toast({
+        title: 'Something went wrong...',
+        description: data.message,
+      });
     }
+    setIsSubmitting(false);
   };
   return (
     <div
@@ -68,11 +77,10 @@ const Contact = () => {
         <button
           className="py-3 px-8 w-max flex items-center justify-between gap-2 border border-[var(--color-border)] bg-black text-white rounded-full mx-auto hover:bg-white hover:text-black duration-500 cursor-pointer"
           type="submit"
+          disabled={isSubmitting}
         >
-          Send Message <IoIosSend />
+          {isSubmitting ? 'Sending...' : 'Send Message'} <IoIosSend />
         </button>
-
-        <p className="mt-4">{result}</p>
       </form>
     </div>
   );
