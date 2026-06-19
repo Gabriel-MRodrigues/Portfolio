@@ -14,6 +14,12 @@ const Projects = () => {
     (project) => project.featured === activeProjects,
   );
 
+  function descriptionCrop(description, maxLength = 120) {
+    return description.length > maxLength
+      ? description.slice(0, maxLength) + "..."
+      : description;
+  }
+
   return (
     <section
       id="projects"
@@ -60,7 +66,7 @@ const Projects = () => {
             }) => (
               <div
                 key={id}
-                onClick={() => setSelectedProject({ title, demoUrl, repo })}
+                onClick={() => setSelectedProject({ title, demoUrl, repo, description })}
                 className="group rounded-lg overflow-hidden shadow-lg p-3 bg-[var(--color-card-bg)] cursor-pointer border border-[var(--color-border)] hover:bg-[var(--color-card-bg-hover)] duration-500"
               >
                 <div className="h-48 overflow-hidden">
@@ -84,7 +90,7 @@ const Projects = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-1">{title}</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  {description}
+                  {descriptionCrop(description)}
                 </p>
               </div>
             ),
@@ -130,6 +136,9 @@ const Projects = () => {
                     GitHub Repo
                   </a>
                 </div>
+                <p className='mt-3'>
+                  {selectedProject.description}
+                </p>
               </div>
             </div>
           )}
