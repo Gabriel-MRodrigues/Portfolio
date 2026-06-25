@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import { Toaster } from './components/ui/toaster';
+import Experience from './components/Experience';
 
 async function getSkills() {
   const res = await fetch(`/api/skills`, { cache: 'no-store' });
@@ -57,6 +58,7 @@ export default function Home() {
       <Navbar />
       <Header />
       <AboutMe info={info} isLoading={loadingInfo} />
+      <Experience />
       <Skills skills={skills} isLoading={loadingSkills} />
       <Projects projects={projects} isLoading={loadingProjects} />
       <Contact />
