@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { TfiAngleDoubleRight } from 'react-icons/tfi';
 import { RiMenu3Line } from 'react-icons/ri';
 import { RxCross2 } from 'react-icons/rx';
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
@@ -32,7 +34,7 @@ const Navbar = () => {
       >
         <a
           href="#home"
-          className="text-2xl font-semibold tracking-tight text-[var(--color-header)]"
+          className="text-2xl font-semibold tracking-tight text-[var(--color-header)] relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
         >
           Gabriel Rodrigues
         </a>
@@ -41,26 +43,54 @@ const Navbar = () => {
           className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-black/40 backdrop-blur`}
         >
           <li>
-            <a href="#home">Home</a>
+            <a 
+              href="#home"
+              className="relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >Home</a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a 
+              href="#about"
+              className="relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >About</a>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <a 
+              href="#experience"
+              className="relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >Experience</a>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <a 
+              href="#skills"
+              className="relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"  
+            >Skills</a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a 
+              href="#projects"
+              className="relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >Projects</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a 
+              href="#contact"
+              className="relative after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >Contact</a>
           </li>
         </ul>
 
         <div className="flex items-center gap-4">
+          <a
+            href='https://www.linkedin.com/in/gabriel-mendes-rodrigues'
+            target='_blank'
+            className='cursor-pointer transition-transform duration-200 hover:scale-110'
+          ><FaLinkedin /></a>
+          <a
+            href='https://github.com/Gabriel-MRodrigues'
+            target='_blank'
+            className='cursor-pointer transition-transform duration-200 hover:scale-110'
+          ><FaGithub /></a>
           <a
             href="#contact"
             className="hidden lg:flex items-center gap-3 px-10 py-2.5 bg-white border border-[var(--color-border)] text-black rounded-full ml-4 hover:bg-black hover:text-white duration-500"
