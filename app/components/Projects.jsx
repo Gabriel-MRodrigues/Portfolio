@@ -12,7 +12,7 @@ const Projects = ({ projects, isLoading }) => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const filteredProjects = projects.filter(
-    (project) => project.featured === activeProjects,
+    (project) => project.featured.split(",").map((f) => f.trim()).includes(activeProjects),
   );
 
   function descriptionCrop(description, maxLength = 120) {

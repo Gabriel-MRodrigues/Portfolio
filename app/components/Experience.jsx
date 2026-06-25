@@ -66,9 +66,8 @@ function Experience() {
               During a 7-week practicum on a live production Next.js application, I built three SEO utilities from
               scratch — a sitemap generator, a JSON-LD schema generator, and an Open Graph generator — all integrated
               directly into the app. I got hands-on with a real-world WordPress + ACF + Next.js stack, diagnosing and
-              fixing mobile responsiveness and server-side rendering issues that had been blocking feature work. By
-              the end of the practicum, the team's feedback was strong enough that I was invited to stay on as a
-              volunteer contributor.
+              fixing mobile responsiveness and server-side rendering issues that had been blocking feature work. By the end 
+              of the practicum, my contributions led to continued involvement with the team as a volunteer contributor.
             </p>
           </li>
         </ol>

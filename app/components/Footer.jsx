@@ -8,7 +8,7 @@ const Footer = () => {
         &copy; {new Date().getFullYear()} Gabriel Rodrigues. All rights
         reserved.
       </p>
-      <a href="#top" className="p-2 rounded-full">
+      <a href="#home" className="p-2 rounded-full">
         <IoArrowUpCircle size={40} />
       </a>
     </footer>
