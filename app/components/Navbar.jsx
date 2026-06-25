@@ -31,7 +31,7 @@ const Navbar = () => {
         className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 transition-colors duration-300 ${isScroll ? 'bg-black/50 backdrop-blur-lg border-b border-[var(--color-border)]' : ''}`}
       >
         <a
-          href="#top"
+          href="#home"
           className="text-2xl font-semibold tracking-tight text-[var(--color-header)]"
         >
           Gabriel Rodrigues
@@ -41,7 +41,7 @@ const Navbar = () => {
           className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-black/40 backdrop-blur`}
         >
           <li>
-            <a href="#top">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
             <a href="#about">About</a>

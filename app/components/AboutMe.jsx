@@ -16,21 +16,20 @@ const AboutMe = ({ info, isLoading }) => {
               Software Developer & Tech Creator
             </h3>
             <p className="text-muted-foreground">
-              Currently pursuing a diploma in{' '}
+              Recent graduate of the{' '}
               <span className="font-semibold">
                 Information Technology: Software Development
               </span>{' '}
-              at{' '}
+              program at{' '}
               <span className="font-semibold">
                 New Brunswick Community College (NBCC)
               </span>
               .
             </p>
             <p className="text-muted-foreground">
-              I build software to solve real problems. I work across frontend
-              and backend development, cloud technologies, and embedded systems.
-              I'm always learning new technologies, tools, and techniques to
-              keep up with a fast-moving tech landscape.
+              I build software to solve real-world problems, working across frontend and backend development,
+              cloud technologies, and embedded systems. I'm passionate about creating reliable, user-focused 
+              solutions and continuously expanding my skills through new technologies and challenges.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 items-start ">

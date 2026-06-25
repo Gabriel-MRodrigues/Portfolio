@@ -7,7 +7,7 @@ import { assets } from '@/assets/assets';
 const Header = () => {
   return (
     <div
-      id="top"
+      id="home"
       className="pt-24 md:pt-28 w-11/12 max-w-3xl mx-auto min-h-screen flex flex-col items-center justify-center gap-6 text-center scroll-mt-20"
     >
       <div>
