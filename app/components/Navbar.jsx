@@ -117,13 +117,18 @@ const Navbar = () => {
             <RxCross2 size={28} />
           </div>
           <li>
-            <a href="#top" onClick={closeMenu}>
+            <a href="#home" onClick={closeMenu}>
               Home
             </a>
           </li>
           <li>
             <a href="#about" onClick={closeMenu}>
               About
+            </a>
+          </li>
+          <li>
+            <a href="#experience" onClick={closeMenu}>
+              Experience
             </a>
           </li>
           <li>
