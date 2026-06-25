@@ -16,7 +16,7 @@ const Skills = ({ skills, isLoading }) => {
   );
 
   return (
-    <section id="skills" className="py-24 px-4 relative scroll-mt-20">
+    <section id="skills" className="py-8 px-4 relative scroll-mt-20">
       <div className="absolute left-[-600px] top-1/2 -translate-y-1/2 w-[850px] h-[600px] rounded-full white__gradient z-10 pointer-events-none" />
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">

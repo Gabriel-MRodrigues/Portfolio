@@ -39,7 +39,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="relative overflow-hidden w-full px-[12%] py-10 scroll-mt-20"
+      className="relative overflow-hidden w-full px-[12%] py-8 scroll-mt-20"
     >
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[1500px] h-[200px] rounded-full white__gradient z-10 pointer-events-none" />
 

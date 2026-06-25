@@ -24,7 +24,7 @@ const Projects = ({ projects, isLoading }) => {
   return (
     <section
       id="projects"
-      className="py-24 px-4 relative scroll-mt-20 overflow-hidden"
+      className="py-8 px-4 relative scroll-mt-20 overflow-hidden"
     >
       <div className="absolute right-[-600px] top-1/2 -translate-y-1/2 w-[850px] h-[600px] rounded-full white__gradient z-10 pointer-events-none" />
       <div className="container mx-auto max-w-5xl">
