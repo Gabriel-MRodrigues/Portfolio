@@ -4,6 +4,7 @@ import { RiMenu3Line } from 'react-icons/ri';
 import { RxCross2 } from 'react-icons/rx';
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { FaFileLines } from "react-icons/fa6";
 
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
@@ -81,16 +82,23 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-4">
-          <a
-            href='https://www.linkedin.com/in/gabriel-mendes-rodrigues'
-            target='_blank'
-            className='cursor-pointer transition-transform duration-200 hover:scale-110'
-          ><FaLinkedin /></a>
-          <a
-            href='https://github.com/Gabriel-MRodrigues'
-            target='_blank'
-            className='cursor-pointer transition-transform duration-200 hover:scale-110'
-          ><FaGithub /></a>
+          <div className='flex items-center ml-5 gap-4'>
+            <a
+              href='https://www.linkedin.com/in/gabriel-mendes-rodrigues'
+              target='_blank'
+              className='hidden sm:flex cursor-pointer transition-transform duration-200 hover:scale-110'
+            ><FaLinkedin /></a>
+            <a
+              href='https://github.com/Gabriel-MRodrigues'
+              target='_blank'
+              className='hidden sm:flex cursor-pointer transition-transform duration-200 hover:scale-110'
+            ><FaGithub /></a>
+            <a
+              href="/Gabriel_Resume.pdf"
+              target='_blank'
+              className='hidden sm:flex cursor-pointer transition-transform duration-200 hover:scale-110'
+            ><FaFileLines  /></a>
+          </div>
           <a
             href="#contact"
             className="hidden lg:flex items-center gap-3 px-10 py-2.5 bg-white border border-[var(--color-border)] text-black rounded-full ml-4 hover:bg-black hover:text-white duration-500"
@@ -145,6 +153,23 @@ const Navbar = () => {
             <a href="#contact" onClick={closeMenu}>
               Contact
             </a>
+          </li>
+          <li className='flex gap-4 text-center'>
+            <a
+              href='https://www.linkedin.com/in/gabriel-mendes-rodrigues'
+              target='_blank'
+              className='cursor-pointer transition-transform duration-200 hover:scale-110'
+            ><FaLinkedin /></a>
+            <a
+              href='https://github.com/Gabriel-MRodrigues'
+              target='_blank'
+              className='cursor-pointer transition-transform duration-200 hover:scale-110'
+            ><FaGithub /></a>
+            <a
+              href="/Gabriel_Resume.pdf"
+              target='_blank'
+              className='cursor-pointer transition-transform duration-200 hover:scale-110'
+            ><FaFileLines  /></a>
           </li>
         </ul>
       </nav>
