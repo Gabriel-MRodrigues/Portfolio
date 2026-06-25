@@ -1,16 +1,16 @@
-import { featuredList, projectList } from '@/assets/assets';
+import { featuredList } from '@/assets/assets';
 import React, { useState } from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { RxCross2 } from 'react-icons/rx';
 import { cn } from '@/lib/utils';
 
-const Projects = () => {
+const Projects = ({ projects }) => {
   const [activeProjects, setActiveProjects] = useState('featured');
 
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const filteredProjects = projectList.filter(
+  const filteredProjects = projects.filter(
     (project) => project.featured === activeProjects,
   );
 

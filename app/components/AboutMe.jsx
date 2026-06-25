@@ -1,8 +1,7 @@
-import { infoList } from '@/assets/assets';
 import React from 'react';
 import { FaLinkedin } from 'react-icons/fa';
 
-const AboutMe = () => {
+const AboutMe = ({ info }) => {
   return (
     <section id="about" className="py-24 px-4 relative scroll-mt-20">
       <div className="container mx-auto max-w-5xl">
@@ -45,7 +44,7 @@ const AboutMe = () => {
             </div>
           </div>
           <div className="flex flex-col gap-6 max-w-2xl mx-auto space-y-6">
-            {infoList.map(({ icon, title, description }, index) => (
+            {info.map(({ icon, title, description }, index) => (
               <div
                 key={index}
                 className="border border-[var(--color-border-muted)] rounded-2xl sm:rounded-full px-5 py-3 min-h-[96px] flex items-center bg-black/20"

@@ -1,4 +1,4 @@
-import { categoryList, skillsList } from '@/assets/assets';
+import { categoryList } from '@/assets/assets';
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { iconMap } from '@/lib/iconMap';
@@ -9,13 +9,6 @@ function findIcon(iconKey) {
 
 const Skills = ({ skills }) => {
   const [activeCategory, setActiveCategory] = useState('backend');
-  console.log(skills);
-
-  const filterSkills = skills.filter((skill) =>
-    skill.category === activeCategory
-  )
-
-  console.log(filterSkills);
 
   const filteredSkills = skills.filter(
     (skill) => skill.category === activeCategory,
