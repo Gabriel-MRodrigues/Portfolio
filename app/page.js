@@ -29,14 +29,26 @@ export default function Home() {
   const [projects, setProjects] = useState([]);
   const [info, setInfo] = useState([]);
 
-  useEffect(() => {
-    async function loadInformation() {
-      setSkills(await getSkills());
-      setProjects(await getProjects());
-      setInfo(await getInfo());
-    }
+  const [loadingSkills, setLoadingSkills] = useState(true);
+  const [loadingProjects, setLoadingProjects] = useState(true);
+  const [loadingInfo, setLoadingInfo] = useState(true);
 
-    loadInformation();
+  useEffect(() => {
+    getSkills()
+      .then(setSkills)
+      .catch((err) => console.error('Failed to load skills', err))
+      .finally(() => setLoadingSkills(false));
+
+    getProjects()
+      .then(setProjects)
+      .catch((err) => console.error('Failed to load projects', err))
+      .finally(() => setLoadingProjects(false));
+
+    getInfo()
+      .then(setInfo)
+      .catch((err) => console.error('Failed to load info', err))
+      .finally(() => setLoadingInfo(false));
+    
   }, []);
 
   return (
@@ -44,9 +56,9 @@ export default function Home() {
       <Toaster />
       <Navbar />
       <Header />
-      <AboutMe info={info} />
-      <Skills skills={skills} />
-      <Projects projects={projects} />
+      <AboutMe info={info} isLoading={loadingInfo} />
+      <Skills skills={skills} isLoading={loadingSkills} />
+      <Projects projects={projects} isLoading={loadingProjects} />
       <Contact />
       <Footer />
     </>
