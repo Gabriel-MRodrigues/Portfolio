@@ -1,11 +1,23 @@
 import { categoryList, skillsList } from '@/assets/assets';
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
+import { iconMap } from '@/lib/iconMap';
 
-const Skills = () => {
+function findIcon(iconKey) {
+  return iconMap[iconKey] ?? null;
+}
+
+const Skills = ({ skills }) => {
   const [activeCategory, setActiveCategory] = useState('backend');
+  console.log(skills);
 
-  const filteredSkills = skillsList.filter(
+  const filterSkills = skills.filter((skill) =>
+    skill.category === activeCategory
+  )
+
+  console.log(filterSkills);
+
+  const filteredSkills = skills.filter(
     (skill) => skill.category === activeCategory,
   );
 
@@ -35,15 +47,19 @@ const Skills = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredSkills.map(({ name, icon, category }, index) => (
-            <div
-              key={index}
-              className="relative p-6 border border-[var(--color-border)] rounded-lg bg-black/40 shadow-xl flex items-center justify-center"
-            >
-              <h3 className="font-semibold text-lg text-center">{name}</h3>
-              <div className="absolute right-6 text-3xl">{icon}</div>
-            </div>
-          ))}
+          {filteredSkills.map(({ name, iconKey, _id }) => {
+            const Icon = findIcon(iconKey);
+
+            return (
+              <div
+                key={_id}
+                className="relative p-6 border border-[var(--color-border)] rounded-lg bg-black/40 shadow-xl flex items-center justify-center"
+              >
+                <h3 className="font-semibold text-lg text-center">{name}</h3>
+                <div className="absolute right-6 text-3xl">{Icon ? <Icon /> : null}</div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>
