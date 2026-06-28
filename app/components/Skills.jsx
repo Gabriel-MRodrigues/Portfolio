@@ -1,16 +1,22 @@
-import { categoryList, skillsList } from '@/assets/assets';
+import { categoryList } from '@/assets/assets';
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
+import { iconMap } from '@/lib/iconMap';
+import { Triangle } from 'react-loader-spinner';
 
-const Skills = () => {
+function findIcon(iconKey) {
+  return iconMap[iconKey] ?? null;
+}
+
+const Skills = ({ skills, isLoading }) => {
   const [activeCategory, setActiveCategory] = useState('backend');
 
-  const filteredSkills = skillsList.filter(
+  const filteredSkills = skills.filter(
     (skill) => skill.category === activeCategory,
   );
 
   return (
-    <section id="skills" className="py-24 px-4 relative scroll-mt-20">
+    <section id="skills" className="py-8 px-4 relative scroll-mt-20">
       <div className="absolute left-[-600px] top-1/2 -translate-y-1/2 w-[850px] h-[600px] rounded-full white__gradient z-10 pointer-events-none" />
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
@@ -33,18 +39,27 @@ const Skills = () => {
             </button>
           ))}
         </div>
+        {isLoading ? (
+          <div className='flex item-center justify-center min-h-[300px]'>
+            <Triangle color='#ffffff' />
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredSkills.map(({ name, iconKey, _id }) => {
+              const Icon = findIcon(iconKey);
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredSkills.map(({ name, icon, category }, index) => (
-            <div
-              key={index}
-              className="relative p-6 border border-[var(--color-border)] rounded-lg bg-black/40 shadow-xl flex items-center justify-center"
-            >
-              <h3 className="font-semibold text-lg text-center">{name}</h3>
-              <div className="absolute right-6 text-3xl">{icon}</div>
-            </div>
-          ))}
-        </div>
+              return (
+                <div
+                  key={_id}
+                  className="relative p-6 border border-[var(--color-border)] rounded-lg bg-black/40 shadow-xl flex items-center justify-center"
+                >
+                  <h3 className="font-semibold text-lg text-center">{name}</h3>
+                  <div className="absolute right-6 text-3xl">{Icon ? <Icon /> : null}</div>
+                </div>
+              )
+            })}
+          </div>
+        )}
       </div>
     </section>
   );

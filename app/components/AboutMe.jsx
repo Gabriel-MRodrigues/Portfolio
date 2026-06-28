@@ -1,10 +1,10 @@
-import { infoList } from '@/assets/assets';
 import React from 'react';
 import { FaLinkedin } from 'react-icons/fa';
+import { Triangle } from 'react-loader-spinner';
 
-const AboutMe = () => {
+const AboutMe = ({ info, isLoading }) => {
   return (
-    <section id="about" className="py-24 px-4 relative scroll-mt-20">
+    <section id="about" className="py-16 px-4 relative scroll-mt-20">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           About Me
@@ -16,21 +16,20 @@ const AboutMe = () => {
               Software Developer & Tech Creator
             </h3>
             <p className="text-muted-foreground">
-              Currently pursuing a diploma in{' '}
+              Recent graduate of the{' '}
               <span className="font-semibold">
                 Information Technology: Software Development
               </span>{' '}
-              at{' '}
+              program at{' '}
               <span className="font-semibold">
                 New Brunswick Community College (NBCC)
               </span>
               .
             </p>
             <p className="text-muted-foreground">
-              I build software to solve real problems. I work across frontend
-              and backend development, cloud technologies, and embedded systems.
-              I'm always learning new technologies, tools, and techniques to
-              keep up with a fast-moving tech landscape.
+              I build software to solve real-world problems, working across frontend and backend development,
+              cloud technologies, and embedded systems. I'm passionate about creating reliable, user-focused 
+              solutions and continuously expanding my skills through new technologies and challenges.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 items-start ">
@@ -44,24 +43,30 @@ const AboutMe = () => {
               </a>
             </div>
           </div>
-          <div className="flex flex-col gap-6 max-w-2xl mx-auto space-y-6">
-            {infoList.map(({ icon, title, description }, index) => (
-              <div
-                key={index}
-                className="border border-[var(--color-border-muted)] rounded-2xl sm:rounded-full px-5 py-3 min-h-[96px] flex items-center bg-black/20"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="p-2">{icon}</div>
-                  <div className="text-left">
-                    <h4 className="font-semibold text-lg">{title}</h4>
-                    <p className="text-sm sm:text-base text-muted-foreground">
-                      {description}
-                    </p>
+          {isLoading ? (
+            <div className='flex items-center justify-center min-h-[300px]'>
+              <Triangle color='#ffffff'/>
+            </div>
+          ) : (
+            <div className="flex flex-col gap-6 max-w-2xl mx-auto space-y-6">
+              {info.map(({ icon, title, description }, index) => (
+                <div
+                  key={index}
+                  className="border border-[var(--color-border-muted)] rounded-2xl sm:rounded-full px-5 py-3 min-h-[96px] flex items-center bg-black/20"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="p-2">{icon}</div>
+                    <div className="text-left">
+                      <h4 className="font-semibold text-lg">{title}</h4>
+                      <p className="text-sm sm:text-base text-muted-foreground">
+                        {description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>

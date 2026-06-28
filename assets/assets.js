@@ -18,6 +18,8 @@ import { SiThymeleaf } from 'react-icons/si';
 import { SiBlazor } from 'react-icons/si';
 import { DiJqueryLogo } from 'react-icons/di';
 import { RiNextjsFill } from 'react-icons/ri';
+import { SiMui } from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
 //Backend
 import { AiOutlineDotNet } from 'react-icons/ai';
 import { FaNodeJs } from 'react-icons/fa';
@@ -27,6 +29,7 @@ import { TbBrandCSharp } from 'react-icons/tb';
 import { FaJava } from 'react-icons/fa';
 import { SiCplusplus } from 'react-icons/si';
 import { FaPhp } from 'react-icons/fa';
+import { SiTypescript } from "react-icons/si";
 //Database
 import { SiMysql } from 'react-icons/si';
 import { DiMsqlServer } from 'react-icons/di';
@@ -42,6 +45,10 @@ import { SiArduino } from 'react-icons/si';
 import { SiPlatformio } from 'react-icons/si';
 import { SiJira } from 'react-icons/si';
 import { SiPostman } from 'react-icons/si';
+import { FaTrello } from "react-icons/fa";
+import { FaWordpress } from "react-icons/fa";
+import { SiExpo } from "react-icons/si";
+import { SiCaddy } from "react-icons/si";
 //Cloud
 import { FaAws } from 'react-icons/fa';
 
@@ -91,6 +98,11 @@ export const skillsList = [
     category: 'frontend',
   },
   {
+    name: 'React Native',
+    icon: <TbBrandReactNative />,
+    category: 'frontend'
+  },
+  {
     name: 'Tailwind CSS',
     icon: <RiTailwindCssFill />,
     category: 'frontend',
@@ -120,6 +132,11 @@ export const skillsList = [
     icon: <RiNextjsFill />,
     category: 'frontend',
   },
+  {
+    name: 'Material UI',
+    icon: <SiMui />,
+    category: 'frontend'
+  },
   //Backend
   {
     name: '.NET',
@@ -129,6 +146,11 @@ export const skillsList = [
   {
     name: 'Node.js',
     icon: <FaNodeJs />,
+    category: 'backend',
+  },
+  {
+    name: 'TypeScript',
+    icon: <SiTypescript />,
     category: 'backend',
   },
   {
@@ -170,11 +192,6 @@ export const skillsList = [
   {
     name: 'MSSQL',
     icon: <DiMsqlServer />,
-    category: 'database',
-  },
-  {
-    name: 'PHP',
-    icon: <FaPhp />,
     category: 'database',
   },
   {
@@ -233,12 +250,37 @@ export const skillsList = [
     icon: <SiPostman />,
     category: 'tools',
   },
+  {
+    name: 'Trello',
+    icon: <FaTrello />,
+    category: 'tools',
+  },
+  {
+    name: 'Wordpress',
+    icon: <FaWordpress />,
+    category: 'tools'
+  },
+  {
+    name: 'Expo',
+    icon: <SiExpo />,
+    category: 'tools'
+  },
+  {
+    name: 'Caddy',
+    icon: <SiCaddy />,
+    category: 'tools'
+  },
   //Cloud
   {
     name: 'AWS',
     icon: <FaAws />,
     category: 'cloud',
   },
+  {
+    name: 'Oracle Cloud',
+    icon: <GrOracle />,
+    category: 'cloud',
+  }
 ];
 
 export const categoryList = [
@@ -246,7 +288,7 @@ export const categoryList = [
   'backend',
   'tools',
   'cloud',
-  'database',
+  'database'
 ];
 
 export const projectList = [
@@ -392,6 +434,16 @@ export const projectList = [
     tags: ['React', 'NodeJs', 'Gemini'],
     demoUrl: '#',
     repo: 'https://github.com/Gabriel-MRodrigues/Bio-Generator-App',
+    featured: 'all',
+  },
+  {
+    id: 15,
+    title: 'Stotify',
+    description: 'Stotify is a self-hosted Android music streaming app built with React Native, TypeScript, and Expo. It streams music from a personal Navidrome server hosted on Oracle Cloud using Docker, featuring background playback, lock screen controls, queue management, and secure HTTPS streaming through the Subsonic API',
+    image: '/projects/stotify_logo.png',
+    tags: ['React Native', 'TypeScript', 'Expo', 'Oracle Cloud'],
+    demoUrl: '#',
+    repo: 'https://github.com/Gabriel-MRodrigues/music-player',
     featured: 'featured',
   },
 ];
