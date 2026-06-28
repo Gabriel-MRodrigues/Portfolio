@@ -2,5 +2,5 @@ import clientPromise from './mongodb';
 
 export async function getDb() {
     const client = await clientPromise;
-    return client.db(process.env.MONGODB_DB || 'portfolio');
+    return client.db(process.env.NEXT_PUBLIC_MONGODB_DB || 'portfolio');
 }
