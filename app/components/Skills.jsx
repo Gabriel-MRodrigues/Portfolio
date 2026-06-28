@@ -2,7 +2,7 @@ import { categoryList } from '@/assets/assets';
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { iconMap } from '@/lib/iconMap';
-import { ClimbingBoxLoader } from 'react-spinners';
+import { Triangle } from 'react-loader-spinner';
 
 function findIcon(iconKey) {
   return iconMap[iconKey] ?? null;
@@ -41,7 +41,7 @@ const Skills = ({ skills, isLoading }) => {
         </div>
         {isLoading ? (
           <div className='flex item-center justify-center min-h-[300px]'>
-            <ClimbingBoxLoader color='#ffffff' />
+            <Triangle color='#ffffff' />
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

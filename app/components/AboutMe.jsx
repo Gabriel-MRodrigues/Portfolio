@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaLinkedin } from 'react-icons/fa';
-import { ClimbingBoxLoader } from 'react-spinners';
+import { Triangle } from 'react-loader-spinner';
 
 const AboutMe = ({ info, isLoading }) => {
   return (
@@ -45,7 +45,7 @@ const AboutMe = ({ info, isLoading }) => {
           </div>
           {isLoading ? (
             <div className='flex items-center justify-center min-h-[300px]'>
-              <ClimbingBoxLoader color='#ffffff'/>
+              <Triangle color='#ffffff'/>
             </div>
           ) : (
             <div className="flex flex-col gap-6 max-w-2xl mx-auto space-y-6">

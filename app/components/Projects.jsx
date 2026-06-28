@@ -4,7 +4,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { RxCross2 } from 'react-icons/rx';
 import { cn } from '@/lib/utils';
-import { ClimbingBoxLoader } from 'react-spinners';
+import { Triangle } from 'react-loader-spinner';
 
 const Projects = ({ projects, isLoading }) => {
   const [activeProjects, setActiveProjects] = useState('featured');
@@ -54,7 +54,7 @@ const Projects = ({ projects, isLoading }) => {
         </div>
         {isLoading ? (
           <div className='flex items-center justify-center min-h-[300px]'>
-            <ClimbingBoxLoader color='#ffffff'/>
+            <Triangle color='#ffffff'/>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
