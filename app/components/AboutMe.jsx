@@ -29,7 +29,8 @@ const AboutMe = ({ info, isLoading }) => {
             <p className="text-muted-foreground">
               I build software to solve real-world problems, working across frontend and backend development,
               cloud technologies, and embedded systems. I'm passionate about creating reliable, user-focused 
-              solutions and continuously expanding my skills through new technologies and challenges.
+              solutions and continuously expanding my skills through new technologies and challenges. When I'm not coding,
+              or exploring new tech, you'll most likely find me playing tennis.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 items-start ">

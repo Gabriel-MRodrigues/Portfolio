@@ -26,7 +26,7 @@ const Header = () => {
       <p className="max-w-2xl mx-auto">
         I'm a Software Developer who enjoys transforming ideas into real-world
         applications and exploring frontend, backend, and cloud technologies, as
-        well as embedded systems.
+        well as embedded systems. Outside of technology, I'm passionate about tennis and love spending time on the court.
       </p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <a

@@ -155,7 +155,7 @@ const Projects = ({ projects, isLoading }) => {
             target="_blank"
             className="inline-flex px-10 py-3 rounded-full bg-white text-black items-center justify-center gap-2 hover:bg-black hover:text-white duration-500"
           >
-            Check my GitHub <FaGithub />
+            Check out my GitHub <FaGithub />
           </a>
         </div>
       </div>
